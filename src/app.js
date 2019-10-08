@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue ({
     el: '#app',
     data: {
-      currencies: []
+      currencies: null
     },
     mounted(){
       this.fetchCurrencies()
