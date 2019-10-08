@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Exchange Rates</title>
+  <script src="js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Exchange Rates</h1>
+    <ul>
+      <li v-for="(value, name) in currencies.rates">
+        {{ name }}: {{ value }}
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
