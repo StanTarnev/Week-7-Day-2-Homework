@@ -13,6 +13,22 @@
         {{ name }}: {{ value }}
       </li>
     </ul>
+    <h2>Convert from Euros</h2>
+    <form v-on:submit.prevent="convertFromEuros">
+      <div>
+        <label for="amount">Enter Amount:</label>
+        <input id="amount" type="text" name="amount" required>
+      </div>
+      <div>
+        <label for="currency">Select Currency:</label>
+        <select id="currency" required>
+          <<option v-for="name in currencies.rates" :value="currencies">{{ currencies.rates.name }}</option>
+      </div>
+      <input type="submit" value="Convert currency">
+      <div>
+        <label>Converted From Euros: {{ convertedFromEuros }}</label>
+      </div>
+    </form>
   </div>
 </body>
 </html>
